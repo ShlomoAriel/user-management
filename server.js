@@ -12,6 +12,7 @@ var mongoose = require('mongoose');
 var UserModel = require('./models/user');
 var RoleModel = require('./models/role');
 
+
 //------------------pasport
 var morgan = require('morgan');
 var passport = require('passport');
