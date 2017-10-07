@@ -56,8 +56,9 @@ app.post('/api/signup', passport.authenticate('jwt', { session: false }), functi
 });
 //-------------------------------------------------------------------------------------------------
 app.post('/api/getToken', function (req, res) {
+    var payload = { foo: 'bar' };
     // if user is found and password is right create a token
-    var token = jwt.encode(user, config.secret);
+    var token = jwt.encode(payload, config.secret);
     // return the information including token as JSON
     res.json({ success: true, token: 'JWT ' + token, user: user });
 });
