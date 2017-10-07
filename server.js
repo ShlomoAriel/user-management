@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 var UserModel = require('./models/user');
 var RoleModel = require('./models/role');
 
-//------------------pasport
+//----------------------------------------------------------------------------------------------------------pasport
 var morgan = require('morgan');
 var passport = require('passport');
 var config = require('./config/database'); // get db config file
@@ -22,7 +22,7 @@ var jwt = require('jwt-simple');
 app.use(morgan('dev'));
 // Use the passport package in our application
 app.use(passport.initialize());
-//------------------pasport
+//----------------------------------------------------------------------------------------------------------pasport
 
 var bodyParser = require('body-parser')
 app.use(bodyParser.json()); // for parsing application/json
@@ -54,7 +54,14 @@ app.post('/api/signup', passport.authenticate('jwt', { session: false }), functi
         });
     }
 });
-//---------
+//-------------------------------------------------------------------------------------------------
+app.post('/api/getToken', function (req, res) {
+    // if user is found and password is right create a token
+    var token = jwt.encode(user, config.secret);
+    // return the information including token as JSON
+    res.json({ success: true, token: 'JWT ' + token, user: user });
+});
+//-------------------------------------------------------------------------------------------------
 // route to authenticate a user (POST http://localhost:8080/api/authenticate)
 app.post('/api/authenticate', function (req, res) {
     UserModel.findOne({
@@ -81,7 +88,7 @@ app.post('/api/authenticate', function (req, res) {
         }
     });
 });
-//------------
+//----------------------------------------------------------------------------------------------------
 app.post('/api/changePassword', function (req, res) {
     console.log('changing password');
     UserModel.findOne({
