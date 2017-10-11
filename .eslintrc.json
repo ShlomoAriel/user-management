@@ -32,7 +32,7 @@
         "camelcase": "off",
         "capitalized-comments": "off",
         "class-methods-use-this": "error",
-        "comma-dangle": "error",
+        "comma-dangle": "off",
         "comma-spacing": [
             "error",
             {
@@ -46,6 +46,7 @@
             "error",
             "never"
         ],
+        "no-console": "warn",
         "consistent-return": "off",
         "consistent-this": "off",
         "curly": "off",
@@ -103,7 +104,7 @@
         "max-lines": "error",
         "max-nested-callbacks": "error",
         "max-params": "error",
-        "max-statements": "error",
+        "max-statements": "off",
         "max-statements-per-line": "off",
         "multiline-ternary": "error",
         "new-parens": "error",
@@ -194,7 +195,7 @@
         "no-unneeded-ternary": "error",
         "no-unused-expressions": "warn",
         "no-unused-vars": "warn",
-        "no-use-before-define": "error",
+        "no-use-before-define": "off",
         "no-useless-call": "error",
         "no-useless-computed-key": "error",
         "no-useless-concat": "error",

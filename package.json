@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "prod": "webpack server.js bundle.js",
+    "start": "nodemon server/server.js",
+    "prod": "webpack server/server.js bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "eslint": "^4.8.0",
+    "nodemon": "^1.12.1",
     "webpack": "^1.13.2"
   }
 }
