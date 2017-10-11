@@ -2,7 +2,7 @@
 const UserModel = require('./models/user');
 const RoleModel = require('./models/role');
 
-const controllers = require('./controllers');
+const configureRouters = require('./controllers');
 
 const passport = require('passport');
 const configurePassport = require('./config/passport');
@@ -22,11 +22,11 @@ function init(app, { db, secret }) {
       if (err) {
         return console.error('find no good' + err);
       }
-      console.log('all users' + users);
+      // console.log('all users' + users);
     });
   });
 
-  app.use(controllers);
+  app.use(configureRouters({ secret }));
 }
 
 function initDB() {
