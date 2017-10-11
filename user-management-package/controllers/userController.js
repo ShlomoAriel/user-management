@@ -40,7 +40,7 @@ function createUserRoutes(secret) {
   // route to authenticate a user (POST http://localhost:8080/api/authenticate)
   router.post('/api/authenticate', function(req, res) {
     if (!req.body.email || !req.body.password) {
-      res.status(400).send('Invalid JSON string');
+      res.status(400).send('Please pass email and password.');
       // res.json({ success: false, msg: 'Please pass email and password.' });
       return;
     }
@@ -101,10 +101,10 @@ function createUserRoutes(secret) {
               user.password = req.body.newPassword;
               user.save(function(err) {
                 if (err) {
-                  console.log('in save err: ' + err);
+                  // console.log('in save err: ' + err);
                   res.send({ success: false, msg: 'Password change failed' });
                 }
-                console.log('in save no err ');
+                // console.log('in save no err ');
                 res.json({ success: true });
               });
             } else {
