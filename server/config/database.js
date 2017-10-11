@@ -1,4 +1,4 @@
 module.exports = {
   'secret': 'devdacticIsAwesome',
-  'database': 'mongodb://localhost/node-rest-auth'
+  'database': 'mongodb://shlomoariel:a1345678@ds153413.mlab.com:53413/user-management'
 };
