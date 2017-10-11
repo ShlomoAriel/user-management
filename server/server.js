@@ -9,7 +9,7 @@ var mongoose = require('mongoose');
 //----------------------------------------------------------------------------------------------------------pasport
 var config = require('./config/database'); // get db config file
 
-mongoose.connect(config.database);
+mongoose.connect(config.database, { useMongoClient: true });
 
 var db = mongoose.connection;
 
