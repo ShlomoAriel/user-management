@@ -1,0 +1,66 @@
+router                                                                                                         
+ ├── query                                         *                                                           
+ ├── expressInit                                   *                                                           
+ ├── initialize                                    *                                                           
+ ├── router                                        *                                                           
+ │   router                                                                                                    
+ │    ├── router                                   *                                                           
+ │    │   router                                                                                               
+ │    │    ├── bound dispatch                      /api/signup                                                 POST
+ │    │    │    ├── authenticate                   /                                                           POST
+ │    │    │    └── <anonymous>                    /                                                           POST
+ │    │    │   
+ │    │    ├── bound dispatch                      /api/authenticate                                           POST
+ │    │    │    └── <anonymous>                    /                                                           POST
+ │    │    │   
+ │    │    ├── bound dispatch                      /api/changePassword                                         POST
+ │    │    │    └── <anonymous>                    /                                                           POST
+ │    │    │   
+ │    │    ├── bound dispatch                      /api/memberinfo                                             GET
+ │    │    │    ├── authenticate                   /                                                           GET
+ │    │    │    └── <anonymous>                    /                                                           GET
+ │    │    │   
+ │    │    ├── bound dispatch                      /api/getUsers                                               GET
+ │    │    │    ├── authenticate                   /                                                           GET
+ │    │    │    └── <anonymous>                    /                                                           GET
+ │    │    │   
+ │    │    ├── bound dispatch                      /api/updateUser/:id                                         PUT
+ │    │    │    ├── authenticate                   /                                                           PUT
+ │    │    │    └── <anonymous>                    /                                                           PUT
+ │    │    │   
+ │    │    ├── bound dispatch                      /api/addUser                                                POST
+ │    │    │    ├── authenticate                   /                                                           POST
+ │    │    │    └── <anonymous>                    /                                                           POST
+ │    │    │   
+ │    │    ├── bound dispatch                      /api/getUser/:id                                            GET
+ │    │    │    ├── authenticate                   /                                                           GET
+ │    │    │    └── <anonymous>                    /                                                           GET
+ │    │    │   
+ │    │    └── bound dispatch                      /api/deleteUser/:id                                         DELETE
+ │    │         ├── authenticate                   /                                                           DELETE
+ │    │         └── <anonymous>                    /                                                           DELETE
+ │    │        
+ │    │   
+ │    └── router                                   *                                                           
+ │        router                                                                                               
+ │         ├── bound dispatch                      /api/getRoles                                               GET
+ │         │    ├── authenticate                   /                                                           GET
+ │         │    └── <anonymous>                    /                                                           GET
+ │         │   
+ │         ├── bound dispatch                      /api/addRole                                                POST
+ │         │    ├── authenticate                   /                                                           POST
+ │         │    └── <anonymous>                    /                                                           POST
+ │         │   
+ │         ├── bound dispatch                      /api/updateRole/:id                                         PUT
+ │         │    ├── authenticate                   /                                                           PUT
+ │         │    └── <anonymous>                    /                                                           PUT
+ │         │   
+ │         └── bound dispatch                      /api/deleteRole/:id                                         DELETE
+ │              ├── authenticate                   /                                                           DELETE
+ │              └── <anonymous>                    /                                                           DELETE
+ │             
+ │        
+ │   
+ └── bound dispatch                                /name                                                       GET
+      └── <anonymous>                              /                                                           GET
+     
