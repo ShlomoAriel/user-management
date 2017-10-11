@@ -1,4 +1,5 @@
 // =============MODELS===================
+
 const UserModel = require('./models/user');
 const RoleModel = require('./models/role');
 

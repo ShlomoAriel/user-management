@@ -1,10 +1,14 @@
 'use strict';
 const express = require('express');
 const app = express();
-const userManagement = require('../user-management-package');
+require('dotenv').config();
 const mongoose = require('mongoose');
+
+const userManagement = require('../user-management-package');
+
 const configMiddleware = require('./middleware');
 var config = require('./config/database'); // get db config file
+
 configMiddleware(app);
 mongoose.connect(config.database, { useMongoClient: true });
 
