@@ -28,6 +28,7 @@
     "passport-jwt": "^2.1.0"
   },
   "devDependencies": {
+    "eslint": "^4.8.0",
     "webpack": "^1.13.2"
   }
 }
