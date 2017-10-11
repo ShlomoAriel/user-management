@@ -25,8 +25,7 @@ function init(app, { db, secret }) {
       console.log('all users' + users);
     });
   });
-
-  app.use(controllers);
+  app.use(controllers({secret}));
 }
 
 function initDB() {
