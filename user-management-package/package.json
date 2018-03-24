@@ -1,0 +1,12 @@
+{
+  "name": "user-management-package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {
+    "mongoose": "^4.5.10"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.3.0"
+  }
+}

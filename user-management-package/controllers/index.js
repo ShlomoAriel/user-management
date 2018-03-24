@@ -7,8 +7,7 @@ const configureRoleRoutes = require('./roleController');
 module.exports = configureRoutes;
 
 function configureRoutes({ secret }) {
-  router.use('/', configureUserRoutes(secret));
-  router.use('/', configureRoleRoutes());
-
+  router.use(configureUserRoutes(secret));
+  router.use(configureRoleRoutes());
   return router;
 }
