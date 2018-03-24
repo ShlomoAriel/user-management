@@ -4,7 +4,7 @@ const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const userManagement = require('../user-management-package');
+const userManagement = require('user-management-package');
 
 const configMiddleware = require('./middleware');
 var config = require('./config/database'); // get db config file
