@@ -23,7 +23,7 @@ function init(app, { db, secret }) {
       if (err) {
         return console.error('find no good' + err);
       }
-      // console.log('all users' + users);
+      console.log('init db with users: ' + users.length);
     });
   });
 
