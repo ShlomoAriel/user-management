@@ -4,7 +4,7 @@ const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const userManagement = require('user-management-package');
+const userManagement = require('../user-management-package');
 
 const configMiddleware = require('./middleware');
 var config = require('./config/database'); // get db config file
@@ -14,7 +14,10 @@ mongoose.connect(config.database, { useMongoClient: true });
 
 var db = mongoose.connection;
 
-userManagement.init(app, { db, secret: config.secret });
+userManagement.init(app, { db, secret: config.secret },
+  ['מנהל', 'מנהל איזור', 'מפקח'],
+  'מנהל'
+);
 
 app.listen(process.env.PORT || 3001, () => {
   //eslint-disable-next-line no-console
