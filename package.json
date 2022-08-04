@@ -22,7 +22,7 @@
     "fs": "0.0.1-security",
     "jwt-simple": "^0.5.0",
     "lodash": "^4.15.0",
-    "mongoose": "^4.5.10",
+    "mongoose": "^5.7.5",
     "mongoose-auto-increment": "^5.0.1",
     "morgan": "^1.7.0",
     "passport": "^0.3.2",
