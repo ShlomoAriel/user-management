@@ -33,6 +33,6 @@
     "eslint-config-prettier": "^2.9.0",
     "express-print-routes": "^1.0.0",
     "nodemon": "^1.12.1",
-    "webpack": "^1.13.2"
+    "webpack": "^5.74.0"
   }
 }
